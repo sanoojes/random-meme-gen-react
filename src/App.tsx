@@ -14,7 +14,7 @@ function App() {
   const fetchMemes = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch("http://meme-api.com/gimme");
+      const response = await fetch("https://meme-api.com/gimme");
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
