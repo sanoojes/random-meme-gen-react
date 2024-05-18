@@ -40,7 +40,7 @@ function App() {
     <>
       <button
         type='button'
-        className='absolute top-4 right-2 bg-neutral-800 hover:bg-neutral-700 focus:outline-none font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 transition-colors z-50'
+        className='absolute top-4 right-2 bg-neutral-800 hover:bg-neutral-700 focus:outline-none font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 transition-colors z-50 overflow-hidden'
         onClick={() => {
           open(
             `https://github.com/sanoojes` + import.meta.env.BASE_URL,
@@ -65,7 +65,7 @@ function App() {
         <Card>
           {!isLoading && data ? (
             <img
-              className='rounded-md'
+              className='rounded-md max-h-[80vh]'
               src={data?.preview?.[data?.preview.length - 1]}
               alt={data?.title}
             />
